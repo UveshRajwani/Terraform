@@ -7,8 +7,13 @@ terraform {
   }
 }
 
+variable "region" {
+  default = "ap-south-1"
+  type = string   
+  description = "This is where AWS resources will be created in"
+}
 provider "aws" {
-  region = "ap-south-1"
+  region = var.region
 }
 
 resource "aws_instance" "ec2" {
