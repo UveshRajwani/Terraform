@@ -15,3 +15,8 @@ provider "aws" {
 resource "aws_s3_bucket" "Demo-Bucket" {
   bucket = "bucketbyterraformbyuvesh"
 }
+resource "aws_s3_object" "File-To-Upload" {
+    bucket = "bucketbyterraformbyuvesh"
+    source = "./myfile.txt"
+    key = "myfile.txt"
+}
