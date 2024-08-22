@@ -19,7 +19,7 @@ provider "random" {
   
 }
 resource "random_id" "Random-Bucket-Name" {
-byte_length = 20
+byte_length = 8
   
 }
 resource "aws_s3_bucket" "Demo-Bucket" {
